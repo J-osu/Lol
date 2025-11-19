@@ -227,7 +227,7 @@
 <body class="l-grid-container">
 
     <!-- Header (SMACSS: Layout - grid-area: header) -->
-    <header class="l-header sticky top-0 bg-opacity-95 backdrop-blur-sm shadow-md z-50 transition duration-300" style="background-color: var(--color-card-bg);">
+    <header class="" style="background-color: var(--color-card-bg);">
         <nav class="nav-menu max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
             <!-- Logo -->
             <a href="#" class="text-3xl font-bold" style="color: var(--color-accent);">LoL Wiki</a>
@@ -243,11 +243,6 @@
                     <i data-lucide="sun-moon" class="w-5 h-5"></i>
                 </button>
             </ul>
-
-            <!-- Botón Hamburguesa (Móvil/Tablet) -->
-            <button id="menu-button" class="lg:hidden p-2 rounded-lg" aria-label="Toggle navigation menu" style="color: var(--color-accent);">
-                <i data-lucide="menu" class="w-6 h-6"></i>
-            </button>
         </nav>
     </header>
 
@@ -265,22 +260,13 @@
             <div class="hero__overlay"></div>
             <!-- BEM: Hero__Content -->
             <div class="hero__content text-white max-w-4xl">
-                <h1 class="text-5xl sm:text-7xl font-extrabold mb-4" style="color: var(--color-text);">Explora el Universo de Runeterra</h1>
-                <p class="text-xl sm:text-2xl mb-8">La fuente de información más completa sobre Campeones, Lore y Estrategias.</p>
+                <h1 class="text-5xl sm:text-7xl font-extrabold mb-4" style="color: var(--color-text);">Wiki-LOL</h1>
+                <p class="text-xl sm:text-2xl mb-8">Informacion sobre League of Legends</p>
                 <a href="#campeones" class="inline-block py-3 px-8 rounded-full text-lg font-semibold transform hover:scale-105 transition duration-300" style="background-color: var(--color-accent); color: var(--color-bg);">Ver Campeones</a>
             </div>
         </section>
 
-        <!-- Componente: Breadcrumbs y Contenido Principal -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" style="background-color: var(--color-bg);">
-            <!-- BEM: Breadcrumbs Block -->
-            <nav class="breadcrumbs mb-8 text-sm" aria-label="Breadcrumb">
-                <ol class="flex space-x-2">
-                    <li><a href="#" class="hover:underline" style="color: var(--color-text);">Inicio</a></li>
-                    <li style="color: var(--color-accent);">/</li>
-                    <li style="color: var(--color-accent);">Home</li>
-                </ol>
-            </nav>
 
             <h2 id="campeones" class="text-4xl font-bold mb-6 border-b pb-2" style="border-color: var(--color-accent);">Campeones Destacados</h2>
             <p class="mb-10 text-lg opacity-80">Una mirada a los campeones más jugados en la Grieta del Invocador.</p>
@@ -289,7 +275,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- BEM: Card Block -->
                 <article class="card rounded-xl overflow-hidden">
-                    <img src="https://placehold.co/600x400/1E2328/C8AA6E?text=Jinx" alt="Jinx, la Pólvora Loca" class="card__image--responsive h-64 object-cover" loading="lazy">
+                    <img src="../images/Zeri_0.jpg" alt="Zeri, la Chispa de Zaun" class="card__image--responsive h-64 object-cover" loading="lazy">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold mb-2" style="color: var(--color-accent);">Jinx</h3>
                         <p class="text-sm mb-4">La Pólvora Loca</p>
@@ -297,7 +283,7 @@
                     </div>
                 </article>
                 <article class="card rounded-xl overflow-hidden">
-                    <img src="https://placehold.co/600x400/1E2328/C8AA6E?text=Yasuo" alt="Yasuo, el Imperdonable" class="card__image--responsive h-64 object-cover" loading="lazy">
+                    <img src="../images/Yasuo.jpg" alt="Yasuo, el Imperdonable" class="card__image--responsive h-64 object-cover" loading="lazy">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold mb-2" style="color: var(--color-accent);">Yasuo</h3>
                         <p class="text-sm mb-4">El Imperdonable</p>
@@ -305,7 +291,7 @@
                     </div>
                 </article>
                 <article class="card rounded-xl overflow-hidden">
-                    <img src="https://placehold.co/600x400/1E2328/C8AA6E?text=Ahri" alt="Ahri, la Vastaya de Nueve Colas" class="card__image--responsive h-64 object-cover" loading="lazy">
+                    <img src="../images/Ahri.jpg" alt="Ahri, la Vastaya de Nueve Colas" class="card__image--responsive h-64 object-cover" loading="lazy">
                     <div class="p-6">
                         <h3 class="text-2xl font-semibold mb-2" style="color: var(--color-accent);">Ahri</h3>
                         <p class="text-sm mb-4">La Vastaya de Nueve Colas</p>
@@ -388,26 +374,11 @@
         </section>
         
     </main>
-    
-    <!-- Sidebar (SMACSS: Layout - grid-area: aside) -->
-    <aside class="l-aside py-8 px-6 border-l" style="border-color: rgba(255, 255, 255, 0.1); background-color: var(--color-card-bg);">
-        <h3 class="text-2xl font-semibold mb-4 border-b pb-2" style="border-color: var(--color-accent);">Publicidad</h3>
-        <div class="card rounded-lg p-4 text-center">
-            <p class="opacity-70">¡Compra el pase de batalla ahora!</p>
-            <button class="mt-4 py-2 px-6 rounded-full font-semibold" style="background-color: var(--color-accent); color: var(--color-bg);">Ir a la Tienda</button>
-        </div>
-        <h3 class="text-2xl font-semibold mt-8 mb-4 border-b pb-2" style="border-color: var(--color-accent);">Actualizaciones</h3>
-        <ul class="space-y-3">
-            <li class="opacity-80">Parche 13.24 (Nuevas skins)</li>
-            <li class="opacity-80">Nuevo Campeón: Hwei, el Visionario</li>
-            <li class="opacity-80">Fin de Temporada Rankeada</li>
-        </ul>
-    </aside>
 
     <!-- Footer (SMACSS: Layout - grid-area: footer) -->
     <footer class="l-footer py-8 border-t mt-12" style="border-color: rgba(255, 255, 255, 0.1); background-color: var(--color-card-bg);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-sm opacity-70">
-            <p>&copy; 2024 Lol Wiki Fan Project. Todos los derechos reservados.</p>
+            <p> &copy; 2024 Lol Wiki Fan Project. Todos los derechos reservados.</p>
             
             <!-- Componente: Menú de Redes Sociales (Usando Flexbox) -->
             <div class="social-menu flex space-x-4 mt-4 sm:mt-0">
