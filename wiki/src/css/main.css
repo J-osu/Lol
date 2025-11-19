@@ -1,0 +1,79 @@
+:root {
+  --color-bg: #0A141D;
+  --color-texto: #F0E6D2;
+  --color-acento: #0AC8B7;
+  --color-card-fondo: #111B24;
+}
+
+.modo-claro {
+  --color-bg: #F9F9F9;
+  --color-texto: #212529;
+  --color-acento: #0078A1;
+  --color-card-fondo: #FFFFFF;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-texto);
+  transition: background-color 0.3s, color 0.3s;
+  font-family: "Roboto", roboto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--color-letras);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.l-grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  flex-grow: 1;
+}
+@media (min-width: 1024px) {
+  .l-grid-container {
+    grid-template-columns: 1fr 4fr;
+  }
+}
+
+.l-footer {
+  background-color: var(--color-card-fondo);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-menu a {
+  color: var(--color-texto);
+  transition: opacity 0.15s;
+}
+.social-menu a i {
+  width: 24px;
+  height: 24px;
+}
+
+.m-card {
+  background-color: var(--color-card-fondo);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.m-card h2 {
+  color: var(--color-acento);
+  font-size: 1.5rem;
+}
+
+.is-active {
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-acento);
+}
+
+.is-loading {
+  opacity: 0.5;
+  cursor: wait;
+}/*# sourceMappingURL=main.css.map */
