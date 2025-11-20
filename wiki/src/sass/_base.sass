@@ -1,18 +1,30 @@
-body 
-    background-color: var(--color-bg);
-    color: var(--color-texto);
-    transition: background-color 0.3s, color 0.3s;
-    font-family: 'Roboto', roboto;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+:root 
+    --color-primary: #0bc5ea;
+    --color-secondary: #fde047;
+    --color-dark-bg: #121212;
+    --color-card-bg: #1f2937;
+    --color-text-light: #f3f4f6;
+    --color-text-muted: #9ca3af;
 
+.c-body 
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin: 0;
+        
 
-a 
-    color: var(--color-letras)
-    text-decoration: none
+    a 
+        color: var(--color-primary);
+        text-decoration: none;
+        transition: color 0.2s;
+        
 
-    &:hover 
-        text-decoration: underline
-        opacity: 0.8
+        a:hover 
+            color: var(--color-secondary);
+        
 
+        h1, h2, h3 
+            font-weight: 900;
+        
+        

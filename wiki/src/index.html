@@ -3,176 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lol Wiki - La Enciclopedia de League of Legends</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <link rel="stylesheet" href="./css/main.css"
+    <title>ZERIWIKI</title>
+    <link rel="stylesheet" href="./css/main.css">
 </head>
-<body class="l-grid-container">
-    <header class="" style="background-color: var(--color-card-bg);">
-        <nav class="nav-menu max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-            <a href="#" class="text-3xl font-bold" style="color: var(--color-accent);">LoL Wiki</a>
+<body class="c-body">
+    <header class="l-header" role="banner">
+        <div class="l-container l-header__content">
+            <a href="#" class="b-logo">ZERI WIKI</a>
             
-            <ul id="nav-list" class="nav-menu__list flex space-x-4 lg:flex hidden lg:items-center">
-                <li><a href="#" class="nav-menu__link p-2 rounded-lg hover:bg-gray-700 transition duration-150">Inicio</a></li>
-                <li><a href="#campeones" class="nav-menu__link p-2 rounded-lg hover:bg-gray-700 transition duration-150">Campeones</a></li>
-                <li><a href="#lore" class="nav-menu__link p-2 rounded-lg hover:bg-gray-700 transition duration-150">Lore</a></li>
-                <li><a href="#mapa" class="nav-menu__link p-2 rounded-lg hover:bg-gray-700 transition duration-150">Mapa</a></li>
-
-                <button id="dark-mode-toggle" class="nav-menu__button flex items-center justify-center p-2 rounded-full ml-4" style="background-color: var(--color-accent); color: var(--color-bg);">
-                    <i data-lucide="sun-moon" class="w-5 h-5"></i>
-                </button>
-            </ul>
-        </nav>
+            <!-- Botón de Menú Móvil -->
+            <button id="menu-toggle" class="b-menu-toggle">
+                <span class="b-menu-toggle__icon">&#9776;</span>
+            </button>
+        </div>
     </header>
-
-    <!-- Main Content (SMACSS: Layout - grid-area: main) -->
-    <main class="l-main relative z-10">
-
-        <!-- Componente: HERO con Video de Fondo y Efecto Parallax -->
-        <section id="hero" class="hero">
-            <!-- BEM: Hero__Video-Background--Parallax -->
-            <!-- Nota: El video debe estar en tu carpeta /assets y ser un loop corto y optimizado. -->
-            <video autoplay loop muted class="hero__video-background hero__video-background--parallax">
-                <!-- URL de ejemplo, reemplaza con tu video de fondo de Lol optimizado -->
-                <source src="../../images/6685366-hd_1920_1080_30fps.mp4" type="video/mp4" onerror="this.parentElement.style.display='none'">
-            </video>
-            <div class="hero__overlay"></div>
-            <!-- BEM: Hero__Content -->
-            <div class="hero__content text-white max-w-4xl">
-                <h1 class="text-5xl sm:text-7xl font-extrabold mb-4" style="color: var(--color-text);">Wiki-LOL</h1>
-                <p class="text-xl sm:text-2xl mb-8">Informacion sobre League of Legends</p>
-                <a href="#campeones" class="inline-block py-3 px-8 rounded-full text-lg font-semibold transform hover:scale-105 transition duration-300" style="background-color: var(--color-accent); color: var(--color-bg);">Ver Campeones</a>
-            </div>
-        </section>
-
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8" style="background-color: var(--color-bg);">
-
-            <h2 id="campeones" class="text-4xl font-bold mb-6 border-b pb-2" style="border-color: var(--color-accent);">Campeones Destacados</h2>
-            <p class="mb-10 text-lg opacity-80">Una mirada a los campeones más jugados en la Grieta del Invocador.</p>
-
-            <!-- Componente: Galería de Cards (Usando CSS Grid para Layout) -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- BEM: Card Block -->
-                <article class="card rounded-xl overflow-hidden">
-                    <img src="../../images/Zeri_0.jpg" alt="Zeri, la Chispa de Zaun" class="card__image--responsive h-64 object-cover" loading="lazy">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2" style="color: var(--color-accent);">Jinx</h3>
-                        <p class="text-sm mb-4">La Chispa de Zaun</p>
-                        <span class="inline-block py-1 px-3 text-xs font-medium rounded-full" style="background-color: var(--color-accent); color: var(--color-bg);">Tiradora</span>
-                    </div>
-                </article>
-                <article>
-                    <img src="../../images/Yasuo.jpg" alt="Yasuo, el Imperdonable" class="card__image--responsive h-64 object-cover" loading="lazy">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2"">Yasuo</h3>
-                        <p class="text-sm mb-4">El Imperdonable</p>
-                        <span class="inline-block py-1 px-3 text-xs font-medium rounded-full" style="background-color: var(--color-accent); color: var(--color-bg);">Luchador</span>
-                    </div>
-                </article>
-                <article>
-                    <img src="../images/Ahri.jpg" alt="Ahri, la Vastaya de Nueve Colas" class="card__image--responsive h-64 object-cover" loading="lazy">
-                    <div>
-                        <h3>Ahri</h3>
-                        <p>La Vastaya de Nueve Colas</p>
-                        <span class="inline-block py-1 px-3 text-xs font-medium rounded-full" style="background-color: var(--color-accent); color: var(--color-bg);">Mago</span>
-                    </div>
-                </article>
-            </div>
-        </section>
+    <main class="l-main l-container" role="main">
         
-        <!-- Componente: Carrusel de Imágenes -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h2 id="lore" class="text-4xl font-bold mb-6 border-b pb-2" style="border-color: var(--color-accent);">Momentos Épicos</h2>
-            <div class="carousel relative">
-                <!-- BEM: Carousel__Track -->
-                <div id="carousel-track" class="carousel__track">
-                    <!-- BEM: Carousel__Slide -->
-                    <div class="carousel__slide">
-                        <div class="card rounded-xl p-4">
-                            <img src="https://placehold.co/800x450/3c3c41/F0E6D2?text=Evento+Mundial" alt="Carrusel Imagen 1" class="card__image--responsive rounded-lg h-56 object-cover" loading="lazy">
-                            <div class="p-4 text-center">
-                                <h4 class="text-xl font-semibold mt-2" style="color: var(--color-accent);">Campeonatos Mundiales</h4>
-                                <p class="text-sm mt-1 opacity-70">Revive la emoción de la final de Worlds.</p>
-                            </div>
-                        </div>
+        <section class="b-hero-champion">
+            <div class="b-hero-champion__content">
+                <p class="b-hero-champion__role">La chispa de Zaun</p>
+                <h1 class="b-hero-champion__title">ZERI</h1>
+                <p class="b-hero-champion__tags">Tiradora</p>
+            </div>
+        </section>
+
+        <section class="b-champion-carousel" aria-label="Aspectos Destacados">
+            <h2 class="b-champion-carousel__heading">Skins de Zeri</h2>
+            <div class="b-carousel-container">
+                <div id="carousel-track" class="b-carousel-track">
+                    
+                    <div class="b-carousel-item">
+                        <img src="../../images/Zeri_noche.jpg" alt="Zeri Noche de Miedo" class="b-carousel-item__image" onerror="this.onerror=null;this.src='https://placehold.co/600x300/e9d5ff/333333?text=Aspecto+K/DA'">
+                        <p class="b-carousel-item__caption">Zeri Noche de Miedo</p>
                     </div>
-                    <div class="carousel__slide">
-                        <div class="card rounded-xl p-4">
-                            <img src="https://placehold.co/800x450/3c3c41/F0E6D2?text=Lore+de+Shurima" alt="Carrusel Imagen 2" class="card__image--responsive rounded-lg h-56 object-cover" loading="lazy">
-                            <div class="p-4 text-center">
-                                <h4 class="text-xl font-semibold mt-2" style="color: var(--color-accent);">El Ascenso de Shurima</h4>
-                                <p class="text-sm mt-1 opacity-70">La historia de Azir y el antiguo imperio.</p>
-                            </div>
-                        </div>
+
+                    <div class="b-carousel-item">
+                        <img src="../../images/Zeri_viaje.jpg" alt="Zeri viaje inmortal" class="b-carousel-item__image" onerror="this.onerror=null;this.src='https://placehold.co/600x300/a7f3d0/333333?text=Aspecto+Estrella+Guardián'">
+                        <p class="b-carousel-item__caption">Zeri viaje inmortal</p>
                     </div>
-                    <div class="carousel__slide">
-                        <div class="card rounded-xl p-4">
-                            <img src="https://placehold.co/800x450/3c3c41/F0E6D2?text=K/DA" alt="Carrusel Imagen 3" class="card__image--responsive rounded-lg h-56 object-cover" loading="lazy">
-                            <div class="p-4 text-center">
-                                <h4 class="text-xl font-semibold mt-2" style="color: var(--color-accent);">El Fenómeno K/DA</h4>
-                                <p class="text-sm mt-1 opacity-70">El grupo musical que revolucionó Runeterra.</p>
-                            </div>
-                        </div>
+
+                    <div class="b-carousel-item">
+                        <img src="../../images/Zeri_prestigio.jpg" alt="Zeri noche de miedo de prestigio" class="b-carousel-item__image" onerror="this.onerror=null;this.src='https://placehold.co/600x300/fecaca/333333?text=Aspecto+Arcade'">
+                        <p class="b-carousel-item__caption">Zeri noche de miedo de prestigio</p>
                     </div>
-                    <div class="carousel__slide">
-                        <div class="card rounded-xl p-4">
-                            <img src="https://placehold.co/800x450/3c3c41/F0E6D2?text=Zaun" alt="Carrusel Imagen 4" class="card__image--responsive rounded-lg h-56 object-cover" loading="lazy">
-                            <div class="p-4 text-center">
-                                <h4 class="text-xl font-semibold mt-2" style="color: var(--color-accent);">Las Calles de Zaun</h4>
-                                <p class="text-sm mt-1 opacity-70">Descubre la subciudad de la tecnomagia.</p>
-                            </div>
-                        </div>
+                    
+                    <div class="b-carousel-item">
+                        <img src="../../images/Zeri_cancion.jpg" alt="Zeri cancion del oceano" class="b-carousel-item__image" onerror="this.onerror=null;this.src='https://placehold.co/600x300/dbeafe/333333?text=Aspecto+Prestigio'">
+                        <p class="b-carousel-item__caption">Zeri cancion del oceano</p>
                     </div>
+
                 </div>
-                <!-- Botones del Carrusel (Usando Flexbox) -->
-                <button onclick="moveCarousel(-1)" class="absolute top-1/2 -translate-y-1/2 left-0 z-40 p-3 rounded-full ml-4" style="background-color: var(--color-accent); color: var(--color-bg); box-shadow: 0 0 10px var(--color-accent);" aria-label="Anterior">
-                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
-                </button>
-                <button onclick="moveCarousel(1)" class="absolute top-1/2 -translate-y-1/2 right-0 z-40 p-3 rounded-full mr-4" style="background-color: var(--color-accent); color: var(--color-bg); box-shadow: 0 0 10px var(--color-accent);" aria-label="Siguiente">
-                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
-                </button>
+                
+                <button id="prev-button" class="b-carousel-button b-carousel-button--prev" aria-label="Aspecto Anterior">&#10094;</button>
+                <button id="next-button" class="b-carousel-button b-carousel-button--next" aria-label="Aspecto Siguiente">&#10095;</button>
             </div>
         </section>
 
-        <!-- Componente: Mapa de Runeterra (iframe) -->
-        <section id="mapa" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <h2 class="text-4xl font-bold mb-6 border-b pb-2" style="border-color: var(--color-accent);">Explora Runeterra</h2>
-            <div class="card rounded-xl overflow-hidden p-2">
-                 <!-- Iframe de ejemplo con una ubicación genérica (Google Maps de un estadio) -->
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.251921160395!2d144.98064131532053!3d-37.81881687975199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642f137e0e47d%3A0xf639a04a55988e0c!2sMelbourne%20Cricket%20Ground!5e0!3m2!1sen!2sau!4v1636500000000!5m2!1sen!2sau" 
-                    width="100%" 
-                    height="450" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="Mapa de Runeterra (Placeholder)">
-                </iframe>
-            </div>
-        </section>
-        
-    </main>
-
-    <!-- Footer (SMACSS: Layout - grid-area: footer) -->
-    <footer class="l-footer py-8 border-t mt-12" style="border-color: rgba(255, 255, 255, 0.1); background-color: var(--color-card-bg);">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-sm opacity-70">
-            <p> &copy; 2024 Lol Wiki Fan Project. Todos los derechos reservados.</p>
+        <div class="l-grid-content">
             
-            <!-- Componente: Menú de Redes Sociales (Usando Flexbox) -->
-            <div class="social-menu flex space-x-4 mt-4 sm:mt-0">
-                <a href="#" aria-label="Twitter" class="hover:opacity-100 transition duration-150" style="color: var(--color-text);"><i data-lucide="twitter" class="w-6 h-6"></i></a>
-                <a href="#" aria-label="Instagram" class="hover:opacity-100 transition duration-150" style="color: var(--color-text);"><i data-lucide="instagram" class="w-6 h-6"></i></a>
-                <a href="#" aria-label="YouTube" class="hover:opacity-100 transition duration-150" style="color: var(--color-text);"><i data-lucide="youtube" class="w-6 h-6"></i></a>
+            <div class="l-grid-content__main">
+                
+                <section class="b-abilities">
+                    <h2 class="b-abilities__title">Habilidades</h2>
+                    
+                    <div class="b-abilities__list">
+                        <article class="b-ability">
+                            <div class="b-ability__icon"><span role="img" aria-label="Orbe de Engaño">🔮</span></div>
+                            <div class="b-ability__details">
+                                <h3 class="b-ability__name">Q: Orbe de Engaño</h3>
+                                <p class="b-ability__cost">Costo: 60/70/80/90/100 de Maná</p>
+                                <p class="b-ability__description">Ahri lanza y recupera su orbe, infligiendo daño mágico al salir y daño verdadero al regresar.</p>
+                            </div>
+                        </article>
+                        
+                        <article class="b-ability">
+                            <div class="b-ability__icon"><span role="img" aria-label="Fuego Zorruno">🔥</span></div>
+                            <div class="b-ability__details">
+                                <h3 class="b-ability__name">W: Fuego Zorruno</h3>
+                                <p class="b-ability__cost">Costo: 40 de Maná</p>
+                                <p class="b-ability__description">Ahri invoca tres fuegos zorrunos que persiguen y atacan a los enemigos cercanos.</p>
+                            </div>
+                        </article>
+                        
+                    </div>
+                </section>
+
+                <section class="b-story">
+                    <h2 class="b-story__title">Historia</h2>
+                    <p class="b-story__text">Ahri es una vastaya que manipula la magia de las emociones de sus víctimas. Alguna vez fue un zorro con lazos ambiguos con el mundo espiritual, pero su deseo de convertirse en humana la llevó a consumir la esencia de los hombres, ganando gradualmente su forma y una profunda tristeza por el vacío que deja su insaciable sed. Su búsqueda continúa, atrapada entre su instinto y su humanidad.</p>
+                </section>
             </div>
+
+            <aside class="l-grid-content__sidebar">
+                <div class="b-stats">
+                    <h3 class="b-stats__title">Estadísticas Rápidas</h3>
+                    <ul class="b-stats__list">
+                        <li class="b-stats__item"><span>Salud Base:</span> <span>570</span></li>
+                        <li class="b-stats__item"><span>Daño de Ataque:</span> <span>53</span></li>
+                        <li class="b-stats__item"><span>Velocidad de Movimiento:</span> <span>330</span></li>
+                        <li class="b-stats__item b-stats__item--last"><span>Rango:</span> <span>550 (A distancia)</span></li>
+                    </ul>
+                </div>
+
+                <div class="b-related">
+                    <h3 class="b-related__title">Relacionados</h3>
+                    <ul class="b-related__list">
+                        <li><a href="#" class="b-related__link">Xayah</a></li>
+                        <li><a href="#" class="b-related__link">Rakan</a></li>
+                        <li><a href="#" class="b-related__link">Wukong</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+    </main>
+    
+    <footer class="l-footer" role="contentinfo">
+        <div class="l-container l-footer__content">
+            <p>&copy; 2025 ZERI Wiki Fan Project. Todo el contenido es propiedad de Riot Games Inc.</p>
+            <p>Creado bajo los requisitos de diseño de interfaces web: Semántica y Responsividad.</p>
         </div>
     </footer>
-
-    <!-- Componente: Botón "Ir Arriba" -->
-    <button id="go-up-button" class="go-up-button p-4 rounded-full shadow-lg hover:shadow-xl transition duration-300" style="background-color: var(--color-accent); color: var(--color-bg);" aria-label="Scroll to top">
-        <i data-lucide="arrow-up" class="w-6 h-6"></i>
-    </button>
-    <script src=./js/script.js></script>
 </body>
+<script src="./js/script.js"></script>
 </html>
