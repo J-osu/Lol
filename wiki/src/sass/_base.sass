@@ -1,30 +1,43 @@
 :root 
-    --color-primary: #0bc5ea;
-    --color-secondary: #fde047;
-    --color-dark-bg: #121212;
-    --color-card-bg: #1f2937;
-    --color-text-light: #f3f4f6;
-    --color-text-muted: #9ca3af;
+    // Colores base (Modo Oscuro Predeterminado)
+    --color-acento-principal: #0bc5ea; // Azul cian (Acento Principal)
+    --color-acento-secundario: #fde047; // Amarillo (Acento Secundario/Hover)
+    --color-fondo-principal: #121212; // Fondo Oscuro Principal
+    --color-fondo-tarjeta: #1f2937; // Fondo de Tarjeta/Módulo Oscuro
+    --color-texto-principal: #f3f4f6; // Texto Principal Claro
+    --color-texto-secundario: #9ca3af; // Texto Secundario/Apagado
+    --color-fondo-cabecera: #0d1117; // Fondo del Header
+    --color-borde: #374151; // Borde para separación de elementos
 
 .c-body 
     font-family: 'Inter', sans-serif;
-    background-color: var(--color-dark-bg);
-    color: var(--color-text-light);
+    background-color: var(--color-fondo-principal); 
+    color: var(--color-texto-principal); 
     line-height: 1.6;
     margin: 0;
         
 
     a 
-        color: var(--color-primary);
+        color: var(--color-acento-principal);
         text-decoration: none;
         transition: color 0.2s;
         
 
         a:hover 
-            color: var(--color-secondary);
+            color: var(--color-acento-secundario);
         
 
         h1, h2, h3 
             font-weight: 900;
         
         
+/* --- MODO CLARO --- */
+.c-body.modo-claro
+    --color-acento-principal: #0078a1; // Azul formal para claro
+    --color-acento-secundario: #dc2626; // Rojo de acento
+    --color-fondo-principal: #f3f4f6; // Fondo Principal Claro
+    --color-fondo-tarjeta: #ffffff; // Fondo de Tarjeta/Módulo Claro
+    --color-texto-principal: #1f2937; // Texto Principal Oscuro
+    --color-texto-secundario: #6b7280; // Texto Secundario Oscuro
+    --color-fondo-cabecera: #ffffff; // Fondo del Header Claro
+    --color-borde: #e5e7eb; // Borde más claro

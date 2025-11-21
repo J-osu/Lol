@@ -1,4 +1,4 @@
- document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
             const menuToggle = document.getElementById('menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
 
@@ -58,4 +58,45 @@
                 window.addEventListener('resize', () => moveToSlide(currentIndex));
                 setTimeout(() => moveToSlide(0), 100);
             }
+
+            // --- Funcionalidad de Modo Oscuro/Claro (Añadido) ---
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.querySelector('body');
+
+            if (themeToggle && body) {
+                
+                function updateTheme(isLightMode) {
+                    const icon = themeToggle.querySelector('.b-theme-toggle__icon');
+                    if (isLightMode) {
+                        body.classList.add('modo-claro');
+                        icon.textContent = '🌙'; // Luna para cambiar a oscuro
+                        themeToggle.setAttribute('aria-label', 'Cambiar a Modo Oscuro');
+                    } else {
+                        body.classList.remove('modo-claro');
+                        icon.textContent = '☀️'; // Sol para cambiar a claro
+                        themeToggle.setAttribute('aria-label', 'Cambiar a Modo Claro');
+                    }
+                    // Guardar la preferencia
+                    localStorage.setItem('theme', isLightMode ? 'claro' : 'oscuro');
+                }
+
+                // 1. Cargar la preferencia al inicio
+                const savedTheme = localStorage.getItem('theme');
+                const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+
+                // Si no hay preferencia guardada, usar la preferencia del sistema
+                if (savedTheme === 'claro' || (!savedTheme && prefersLight)) {
+                    updateTheme(true);
+                } else {
+                    updateTheme(false);
+                }
+
+                // 2. Manejar el click del botón
+                themeToggle.addEventListener('click', () => {
+                    const isLightMode = body.classList.contains('modo-claro');
+                    updateTheme(!isLightMode);
+                });
+            }
         });
+
+        

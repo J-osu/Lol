@@ -9,6 +9,9 @@
 <body class="c-body">
     <header class="l-header" role="banner">
         <div class="l-container l-header__content"id="inicio">
+            <button id="theme-toggle" class="b-theme-toggle" aria-label="Cambiar Tema (Claro/Oscuro)">
+                <span class="b-theme-toggle__icon">☀️</span>
+            </button>
             <a href="#" class="b-logo">LOL Wiki</a>
             <nav class="b-nav" aria-label="Navegación Principal">
                 <ul class="b-nav__list">
@@ -17,12 +20,25 @@
                     <li><a href="#habilidades" class="b-nav__link">Habilidades</a></li>
                     <li><a href="#historia" class="b-nav__link">Historia</a></li>
                 </ul>
+                
             </nav>
+            
             <button id="menu-toggle" class="b-menu-toggle">
-                <span class="b-menu-toggle__icon">&#9776;</span>
+                <span class="b-menu-toggle__icon">☰</span>
             </button>
+            
         </div>
     </header>
+    
+    <nav id="mobile-menu" class="b-nav-mobile is-hidden" aria-label="Navegación Móvil">
+        <ul class="b-nav-mobile__list">
+            <li><a href="#" class="b-nav-mobile__link">Inicio</a></li>
+            <li><a href="#campeones" class="b-nav-mobile__link">Campeones</a></li>
+            <li><a href="#habilidades" class="b-nav-mobile__link">Habilidades</a></li>
+            <li><a href="#historia" class="b-nav-mobile__link">Historia</a></li>
+        </ul>
+    </nav>
+    
     <main class="l-main l-container" role="main">
         
         <section class="b-hero-champion">
@@ -30,9 +46,15 @@
                 <p class="b-hero-champion__role">Runeterra</p>
                 <h1 class="b-hero-champion__title">LOL Wiki</h1>
             </div>
-            <video>
+        <section class="b-hero-champion">
+            <div class="b-hero-champion__content">
+                <p class="b-hero-champion__role">Runeterra</p>
+                <h1 class="b-hero-champion__title">LOL Wiki</h1>
+            </div>
+            <video autoplay loop>
                 <source src="../../images/6685366-hd_1920_1080_30fps.mp4" type="video/mp4">
             </video>
+        </section>
         </section>
 
         <section class="b-champion-carousel" aria-label="Aspectos Destacados" id="campeones">
@@ -67,8 +89,8 @@
 
                 </div>
                 
-                <button id="prev-button" class="b-carousel-button b-carousel-button--prev" aria-label="Aspecto Anterior">&#10094;</button>
-                <button id="next-button" class="b-carousel-button b-carousel-button--next" aria-label="Aspecto Siguiente">&#10095;</button>
+                <button id="prev-button" class="b-carousel-button b-carousel-button--prev" aria-label="Aspecto Anterior">❮</button>
+                <button id="next-button" class="b-carousel-button b-carousel-button--next" aria-label="Aspecto Siguiente">❯</button>
             </div>
         </section>
 
@@ -81,7 +103,7 @@
                     
                     <div class="b-abilities__list">
                         <article class="b-ability">
-                            <div class="b-ability__icon"><img src="../../images/zeri_ulti.jpg"></span></div>
+                            <div class="b-ability__icon"><img src="../../images/zeri_ulti.jpg"></div>
                             <div class="b-ability__details">
                                 <h3 class="b-ability__name">Zeri Ultimate</h3>
                                 <p class="b-ability__cost">Mana: 100</p>
@@ -90,7 +112,7 @@
                         </article>
                         
                         <article class="b-ability">
-                            <div class="b-ability__icon"><img src="../../images/fiddlesticks_ulti.jpg"</span></div>
+                            <div class="b-ability__icon"><img src="../../images/fiddlesticks_ulti.jpg"></div>
                             <div class="b-ability__details">
                                 <h3 class="b-ability__name">Fiddlesticks ultimate</h3>
                                 <p class="b-ability__cost">Mana: 100</p>
@@ -99,7 +121,7 @@
                         </article>
 
                         <article class="b-ability">
-                            <div class="b-ability__icon"><img src="../../images/Briar_ulti.jpg"</span></div>
+                            <div class="b-ability__icon"><img src="../../images/Briar_ulti.jpg"></div>
                             <div class="b-ability__details">
                                 <h3 class="b-ability__name">Briar ultimate</h3>
                                 <p class="b-ability__cost">Mana: No usa</p>
@@ -108,7 +130,7 @@
                         </article>
 
                         <article class="b-ability">
-                            <div class="b-ability__icon"><img src="../../images/Zac_ulti.jpg"</span></div>
+                            <div class="b-ability__icon"><img src="../../images/Zac_ulti.jpg"></div>
                             <div class="b-ability__details">
                                 <h3 class="b-ability__name">Zac ultimate</h3>
                                 <p class="b-ability__cost">Mana: No usa</p>
@@ -117,7 +139,7 @@
                         </article>
 
                         <article class="b-ability">
-                            <div class="b-ability__icon"><img src="../../images/Kindred_ulti.jpg"</span></div>
+                            <div class="b-ability__icon"><img src="../../images/Kindred_ulti.jpg"></div>
                             <div class="b-ability__details">
                                 <h3 class="b-ability__name">Kindred ultimate</h3>
                                 <p class="b-ability__cost">Mana: 120</p>
@@ -142,14 +164,18 @@
                     <p class="b-story__text">Sabemos que en Runaterra, el planeta en el que tiene lugar League of Legends, han pasado y están pasando muchas cosas. Sin embargo, todas esas cosas no han pasado a la vez; de hecho, la historia de Runaterra abarca unos 10.000 años. Repasemos el lore del juego de Riot Games y organicemos todas las historias que conocemos o nos suenan sobre este mundo de fantasía</p>
                     <a href="https://www.millenium.gg/noticias/39323.html" class="b-related__link">Visitar  </a>
                 </section>
+                <section class="b-story">
+                <h2 class="b-abilities__title" id="habilidades">Mapa Runeterra</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12679.341452100549!2d-1.9523897483908135!3d37.39372560116202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd652ef104833cdd%3A0x5fe1c2a360644f5e!2sSupermercados%20Consum!5e0!3m2!1ses!2ses!4v1763724137732!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
             </aside>
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12679.341452100549!2d-1.9523897483908135!3d37.39372560116202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd652ef104833cdd%3A0x5fe1c2a360644f5e!2sSupermercados%20Consum!5e0!3m2!1ses!2ses!4v1763724137732!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
     </main>
     
     <footer class="l-footer" role="contentinfo">
         <div class="l-container l-footer__content">
-            <p>&copy; 2025 ZERI Wiki Fan Project. Todo el contenido es propiedad de Riot Games Inc.</p>
+            <p>© 2025 ZERI Wiki Fan Project. Todo el contenido es propiedad de Riot Games Inc.</p>
             <p>Creado bajo los requisitos de diseño de interfaces web: Semántica y Responsividad.</p>
         </div>
     </footer>
