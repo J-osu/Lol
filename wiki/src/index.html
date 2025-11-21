@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZERIWIKI</title>
+    <title>LOL Wiki</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body class="c-body">
     <header class="l-header" role="banner">
-        <div class="l-container l-header__content">
-            <a href="#" class="b-logo">ZERI WIKI</a>
-            
-            <!-- Botón de Menú Móvil -->
+        <div class="l-container l-header__content"id="inicio">
+            <a href="#" class="b-logo">LOL Wiki</a>
+            <nav class="b-nav" aria-label="Navegación Principal">
+                <ul class="b-nav__list">
+                    <li><a href="#" class="b-nav__link">Inicio</a></li>
+                    <li><a href="#campeones" class="b-nav__link">Campeones</a></li>
+                    <li><a href="#habilidades" class="b-nav__link">Habilidades</a></li>
+                    <li><a href="#historia" class="b-nav__link">Historia</a></li>
+                </ul>
+            </nav>
             <button id="menu-toggle" class="b-menu-toggle">
                 <span class="b-menu-toggle__icon">&#9776;</span>
             </button>
@@ -21,35 +27,42 @@
         
         <section class="b-hero-champion">
             <div class="b-hero-champion__content">
-                <p class="b-hero-champion__role">La chispa de Zaun</p>
-                <h1 class="b-hero-champion__title">ZERI</h1>
-                <p class="b-hero-champion__tags">Tiradora</p>
+                <p class="b-hero-champion__role">Runeterra</p>
+                <h1 class="b-hero-champion__title">LOL Wiki</h1>
             </div>
+            <video>
+                <source src="../../images/6685366-hd_1920_1080_30fps.mp4" type="video/mp4">
+            </video>
         </section>
 
-        <section class="b-champion-carousel" aria-label="Aspectos Destacados">
-            <h2 class="b-champion-carousel__heading">Skins de Zeri</h2>
+        <section class="b-champion-carousel" aria-label="Aspectos Destacados" id="campeones">
+            <h2 class="b-champion-carousel__heading">Campeones</h2>
             <div class="b-carousel-container">
                 <div id="carousel-track" class="b-carousel-track">
                     
                     <div class="b-carousel-item">
-                        <img src="../../images/Zeri_noche.jpg" alt="Zeri Noche de Miedo" class="b-carousel-item__image" onerror="this.onerror=null;this.src='https://placehold.co/600x300/e9d5ff/333333?text=Aspecto+K/DA'">
-                        <p class="b-carousel-item__caption">Zeri Noche de Miedo</p>
+                        <img src="../../images/Zeri.jpg" alt="Zeri" class="b-carousel-item__image">
+                        <p class="b-carousel-item__caption">Zeri</p>
                     </div>
 
                     <div class="b-carousel-item">
-                        <img src="../../images/Zeri_viaje.jpg" alt="Zeri viaje inmortal" class="b-carousel-item__image" onerror="this.onerror=null;this.src='https://placehold.co/600x300/a7f3d0/333333?text=Aspecto+Estrella+Guardián'">
-                        <p class="b-carousel-item__caption">Zeri viaje inmortal</p>
+                        <img src="../../images/FiddleSticks.jpg" alt="Fiddlesticks" class="b-carousel-item__image">
+                        <p class="b-carousel-item__caption">Fiddlesticks</p>
                     </div>
 
                     <div class="b-carousel-item">
-                        <img src="../../images/Zeri_prestigio.jpg" alt="Zeri noche de miedo de prestigio" class="b-carousel-item__image" onerror="this.onerror=null;this.src='https://placehold.co/600x300/fecaca/333333?text=Aspecto+Arcade'">
-                        <p class="b-carousel-item__caption">Zeri noche de miedo de prestigio</p>
+                        <img src="../../images/Briar.jpg" alt="Briar" class="b-carousel-item__image">
+                        <p class="b-carousel-item__caption">Briar</p>
                     </div>
                     
                     <div class="b-carousel-item">
-                        <img src="../../images/Zeri_cancion.jpg" alt="Zeri cancion del oceano" class="b-carousel-item__image" onerror="this.onerror=null;this.src='https://placehold.co/600x300/dbeafe/333333?text=Aspecto+Prestigio'">
-                        <p class="b-carousel-item__caption">Zeri cancion del oceano</p>
+                        <img src="../../images/Zac.jpg" alt="Zac" class="b-carousel-item__image">
+                        <p class="b-carousel-item__caption">Zac</p>
+                    </div>
+
+                    <div class="b-carousel-item">
+                        <img src="../../images/Kindred.jpg" alt="Zac" class="b-carousel-item__image">
+                        <p class="b-carousel-item__caption">Kindred</p>
                     </div>
 
                 </div>
@@ -64,58 +77,77 @@
             <div class="l-grid-content__main">
                 
                 <section class="b-abilities">
-                    <h2 class="b-abilities__title">Habilidades</h2>
+                    <h2 class="b-abilities__title" id="habilidades">Habilidades</h2>
                     
                     <div class="b-abilities__list">
                         <article class="b-ability">
-                            <div class="b-ability__icon"><span role="img" aria-label="Orbe de Engaño">🔮</span></div>
+                            <div class="b-ability__icon"><img src="../../images/zeri_ulti.jpg"></span></div>
                             <div class="b-ability__details">
-                                <h3 class="b-ability__name">Q: Orbe de Engaño</h3>
-                                <p class="b-ability__cost">Costo: 60/70/80/90/100 de Maná</p>
-                                <p class="b-ability__description">Ahri lanza y recupera su orbe, infligiendo daño mágico al salir y daño verdadero al regresar.</p>
+                                <h3 class="b-ability__name">Zeri Ultimate</h3>
+                                <p class="b-ability__cost">Mana: 100</p>
+                                <p class="b-ability__description"> Zeri discharges an electric nova that deals magic damage to nearby enemies. If this hits at least one enemy champion, she enters Overcharged for 5 seconds. Hitting an enemy champion with an ability or An icon for Zeri's ability Living Battery charged attack will extend the duration by 1.5 seconds, up to its original duration.</p>
                             </div>
                         </article>
                         
                         <article class="b-ability">
-                            <div class="b-ability__icon"><span role="img" aria-label="Fuego Zorruno">🔥</span></div>
+                            <div class="b-ability__icon"><img src="../../images/fiddlesticks_ulti.jpg"</span></div>
                             <div class="b-ability__details">
-                                <h3 class="b-ability__name">W: Fuego Zorruno</h3>
-                                <p class="b-ability__cost">Costo: 40 de Maná</p>
-                                <p class="b-ability__description">Ahri invoca tres fuegos zorrunos que persiguen y atacan a los enemigos cercanos.</p>
+                                <h3 class="b-ability__name">Fiddlesticks ultimate</h3>
+                                <p class="b-ability__cost">Mana: 100</p>
+                                <p class="b-ability__description">Active: Fiddlesticks An icon representing the keyword Channel channels for 1.5 seconds, then An icon representing the keyword Blink blinks to the target location upon completion with a murder of crows flying wildly around it for 5 seconds, dealing magic damage every 0.25 seconds to nearby enemies.</p>
                             </div>
                         </article>
+
+                        <article class="b-ability">
+                            <div class="b-ability__icon"><img src="../../images/Briar_ulti.jpg"</span></div>
+                            <div class="b-ability__details">
+                                <h3 class="b-ability__name">Briar ultimate</h3>
+                                <p class="b-ability__cost">Mana: No usa</p>
+                                <p class="b-ability__description">Active: Briar kicks her pillory's hemolith in the target direction, briefly granting An icon representing the keyword Sight sight of its surroundings as it travels and marking the first enemy champion hit as her prey. The mark's application An icon representing the keyword Disrupt disrupts the target's ongoing An icon representing the keyword Channel channels. While the target is marked, they are An icon representing the keyword True sight revealed.</p>
+                            </div>
+                        </article>
+
+                        <article class="b-ability">
+                            <div class="b-ability__icon"><img src="../../images/Zac_ulti.jpg"</span></div>
+                            <div class="b-ability__details">
+                                <h3 class="b-ability__name">Zac ultimate</h3>
+                                <p class="b-ability__cost">Mana: No usa</p>
+                                <p class="b-ability__description">Active: Zac bounces after the cast time, then bounces 3 additional times each second over 3 seconds. Each bounce deals magic damage to enemies hit, An icon representing the keyword Airborne knocks them back over 1 second, and An icon representing the keyword Slow slows them by 20% for the same duration. An enemy can be hit by multiple bounces, but ones beyond the first deal 50% damage to them and do not apply the An icon representing the keyword Airborne knock back.</p>
+                            </div>
+                        </article>
+
+                        <article class="b-ability">
+                            <div class="b-ability__icon"><img src="../../images/Kindred_ulti.jpg"</span></div>
+                            <div class="b-ability__details">
+                                <h3 class="b-ability__name">Kindred ultimate</h3>
+                                <p class="b-ability__cost">Mana: 120</p>
+                                <p class="b-ability__description">Active: Lamb blesses the ground underneath herself and enters a 0.264 seconds cast time, creating a sacred zone at her location at the time of cast that lasts for 4 seconds. All units inside the zone gain a An icon representing the keyword Minimum health threshold minimum health threshold equal to  10% of their maximum health, and will also become An icon representing the keyword Invulnerability invulnerable while remaining in the area when they reach or are at the threshold, during which they also cannot be An icon representing the keyword Heal healed, but can still  regenerate health.</p>
+                            </div>
+                        </article>
+
+                        
                         
                     </div>
                 </section>
 
-                <section class="b-story">
+                <section class="b-story" id="historia">
                     <h2 class="b-story__title">Historia</h2>
-                    <p class="b-story__text">Ahri es una vastaya que manipula la magia de las emociones de sus víctimas. Alguna vez fue un zorro con lazos ambiguos con el mundo espiritual, pero su deseo de convertirse en humana la llevó a consumir la esencia de los hombres, ganando gradualmente su forma y una profunda tristeza por el vacío que deja su insaciable sed. Su búsqueda continúa, atrapada entre su instinto y su humanidad.</p>
-                </section>
-            </div>
+                    <p class="b-story__text">Sabemos que en Runaterra, el planeta en el que tiene lugar League of Legends, han pasado y están pasando muchas cosas. Sin embargo, todas esas cosas no han pasado a la vez; de hecho, la historia de Runaterra abarca unos 10.000 años. Repasemos el lore del juego de Riot Games y organicemos todas las historias que conocemos o nos suenan sobre este mundo de fantasía</p>
+                    <a href="https://www.millenium.gg/noticias/39323.html" class="b-related__link">Visitar  </a>
+        </div>
 
-            <aside class="l-grid-content__sidebar">
-                <div class="b-stats">
-                    <h3 class="b-stats__title">Estadísticas Rápidas</h3>
-                    <ul class="b-stats__list">
-                        <li class="b-stats__item"><span>Salud Base:</span> <span>570</span></li>
-                        <li class="b-stats__item"><span>Daño de Ataque:</span> <span>53</span></li>
-                        <li class="b-stats__item"><span>Velocidad de Movimiento:</span> <span>330</span></li>
-                        <li class="b-stats__item b-stats__item--last"><span>Rango:</span> <span>550 (A distancia)</span></li>
-                    </ul>
-                </div>
-
+            <aside class="l-grid-content__sidebar" id="relacionados">
                 <div class="b-related">
                     <h3 class="b-related__title">Relacionados</h3>
                     <ul class="b-related__list">
-                        <li><a href="#" class="b-related__link">Xayah</a></li>
-                        <li><a href="#" class="b-related__link">Rakan</a></li>
-                        <li><a href="#" class="b-related__link">Wukong</a></li>
+                        <li><a href="https://wiki.leagueoflegends.com/en-us/Ekko" class="b-related__link">Ekko</a></li>
+                        <li><a href="https://wiki.leagueoflegends.com/en-us/Jinx" class="b-related__link">Jinx</a></li>
+                        <li><a href="https://wiki.leagueoflegends.com/en-us/Warwick" class="b-related__link">Warwick</a></li>
                     </ul>
                 </div>
             </aside>
         </div>
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12679.341452100549!2d-1.9523897483908135!3d37.39372560116202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd652ef104833cdd%3A0x5fe1c2a360644f5e!2sSupermercados%20Consum!5e0!3m2!1ses!2ses!4v1763724137732!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </main>
     
     <footer class="l-footer" role="contentinfo">
